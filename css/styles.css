@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  width: 940px;
+  height: 70px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.logo {
+  margin: auto 0;
+}
+
+header .links {
+  margin: auto 60px;
+}
+
+header .links a {
+  padding: 15px;
+  color: #111111;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.resume {
+  margin: auto;
+  display: flex;
+  background-color: #FBDFDB;
+  border-radius: 30px;
+  width: 940px;
+  height: 366px;
+}
+
+.presentation {
+  width: 316px;
+  text-align: justify;
+  margin: auto 0 auto 60px;
+}
+
+.presentation h1 {
+  font-size: 32px;
+  color: #111111;
+}
+
+.presentation p {
+  font-size: 18px;
+  color: #111111;
+  opacity: 0.7;
+  line-height: 28px;
+}
+
+.img-chef {
+  margin: auto;
+  margin-bottom: 0;
+  margin-right: 100px;
+}
+
+section{
+  margin: 30px auto;
+  width: 940px;
+}
+
+section h1{
+  font-size: 24px;
+  color: #111111;
+}
+
+.cookbook {
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cards {
+  margin-right: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.cards img {
+  width: 300px;
+  height: 140px;
+  border-radius: 15px;
+}
+
+.cards h2 {
+  font-size: 18px;
+  color: #111111;
+  line-height: 21px;
+  margin-top: 10px;
+}
+
+.cards p {
+  margin-top: 3px;
+  font-size: 14px;
+  color: #777777;
+}
+
+footer {
+  width: 100%;
+  background-color: #EEEEEE;
+  text-align: center;
+  margin-top: 30px;
+  padding: 15px;
+  color: #999999;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.receitas, .sobre {
+  margin-top: auto;
+}
+
+.sobre h1 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #111111;
+}
+
+.sobre p {
+  font-size: 18px;
+  color: #444444;
+  line-height: 28px;
+}
+
+.topic {
+  margin-top: 30px;
+}
+
+.topic h1 {
+  font-size: 20px;
+  color: #111111;
+}
+
+/* ** MODAL ** */
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal {
+  width: 660px;
+  height: 413px;
+  position: relative;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  margin: 5% auto;
+}
+
+.modal-content {
+  text-align: center;
+}
+
+.modal img {
+  width: 600px;
+  height: 200px;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+.modal h2 {
+  font-size: 24px;
+  color: #111111;
+  margin-top: 7px;
+}
+
+.modal p {
+  font-size: 18px;
+  color: #777777;
+  margin-top: 3px;
+}
+
+.modal a {
+  color: #999999;
+  font-size: 16px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* **MODAL ACTIVE** */
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s;
+}
