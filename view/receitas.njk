@@ -1,0 +1,19 @@
+{% extends "layout.njk" %}
+
+{% block title %}
+  <title>Foodfy - Receitas</title>
+{% endblock %}
+
+{% block content %}
+  <section class='receitas'>
+    <div class="cookbook">
+      {% for receita in receitas %}
+        <div class="cards" id="{{ receita.id }}">
+          <img src="{{ receita.image }}" alt="{{ receita.title }}">
+          <h2>{{ receita.title }}</h2>
+          <p>por {{ receita.author }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}

@@ -8,6 +8,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  height: 100%;
 }
 
 header {
@@ -106,7 +107,7 @@ section h1{
 }
 
 footer {
-  width: 100%;
+  max-width: 100%;
   background-color: #EEEEEE;
   text-align: center;
   margin-top: 30px;
@@ -132,11 +133,11 @@ footer {
   line-height: 28px;
 }
 
-.topic {
+.topic-sobre {
   margin-top: 30px;
 }
 
-.topic h1 {
+.topic-sobre h1 {
   font-size: 20px;
   color: #111111;
 }
@@ -198,4 +199,115 @@ footer {
   opacity: 1;
   visibility: visible;
   transition: opacity 1s;
+}
+
+/* === RECIPES PAGE === */
+.receita {
+  max-width: 940px;
+  margin: -5px auto 0;
+}
+
+.receita img {
+  border-radius: 15px;
+  margin: 0 20%;
+}
+
+.receita a{
+  font-size: 12px;
+  color: #999999;
+  margin-left: 15px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.titulo {
+  text-align: center;
+}
+
+.titulo h1 {
+  font-size: 36px;
+  color: #111111;
+  margin-top: 10px;
+}
+
+.titulo p {
+  font-size: 20px;
+  color: #777777;
+  margin-top: 4px;
+}
+
+.topic {
+  display: flex;
+}
+
+.topic-ingredient {
+  visibility: visible;
+}
+
+.topic-ingredient.deactive {
+  visibility: hidden;
+  height: 1px;
+}
+
+.topic-preparation {
+  visibility: visible;
+}
+
+.topic-preparation.deactive {
+  visibility: hidden;
+  height: 1px;
+}
+.topic-info {
+  visibility: visible;
+}
+
+.topic-info.deactive {
+  visibility: hidden;
+  height: 1px;
+}
+
+.ingredientes {
+  margin-top: 20px;
+}
+
+.ingredientes h1 {
+  font-size: 24px;
+  color: #111111;
+}
+
+.ingredientes ul {
+  font-size: 18px;
+  color: #444444;
+  line-height: 28px;
+  margin-left: 18px;
+}
+
+.modopreparo {
+  margin-top: 15px;
+}
+
+.modopreparo h1 {
+  font-size: 24px;
+  color: #111111;
+}
+
+.modopreparo p {
+  font-size: 18px;
+  color: #444444;
+  line-height: 28px;
+}
+
+.infoad {
+  margin-top: 15px;
+}
+
+.infoad h1 {
+  font-size: 24px;
+  color: #111111;
+}
+
+.infoad p {
+  font-size: 18px;
+  color: #444444;
+  line-height: 28px;
 }
