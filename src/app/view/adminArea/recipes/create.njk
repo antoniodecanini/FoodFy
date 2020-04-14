@@ -1,0 +1,17 @@
+{% extends "adminArea/layoutAdm.njk" %}
+
+{% block title %}
+  <title>Foodfy - Criar nova</title>
+{% endblock %}
+
+{% block content %}
+  <form class="form-card" method="POST" action="/admin/recipes">
+    <section class="create-recipe">
+      <h3>Criando receita</h3>
+      <button type="submit" class="save">Salvar receita</button>
+    </section>
+
+    {% include 'adminArea/recipes/fields.njk' %}
+
+  </form>
+  {% endblock %}

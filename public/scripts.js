@@ -4,7 +4,7 @@ const showHideButton = document.querySelectorAll('.show-hide');
 for (let card of cards) {
   card.addEventListener("click", function() {
     const id = card.getAttribute('id');
-    window.location.href = `/receita/${id}`
+    window.location.href = `/receitas/${id}`
   });
 }
 

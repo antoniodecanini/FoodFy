@@ -1,4 +1,4 @@
-{% extends "layout.njk" %}
+{% extends "userArea/layout.njk" %}
 
 {% block title %}
   <title>Foodfy</title>
@@ -20,11 +20,11 @@
     <h1>Mais vistas</h1>
 
     <div class="cookbook">
-      {% for receita in receitas %}
-        <div class="cards" id="{{ receita.id }}">
-          <img src="{{ receita.image }}" alt="{{ receita.title }}">
-          <h2>{{ receita.title }}</h2>
-          <p>por {{ receita.author }}</p>
+      {% for recipe in data.recipes %}
+        <div class="cards" id="{{ recipe.id }}">
+          <img src="{{ recipe.image }}" alt="{{ recipe.title }}">
+          <h2>{{ recipe.title }}</h2>
+          <p>por {{ recipe.author }}</p>
         </div>
       {% endfor %}
     </div>

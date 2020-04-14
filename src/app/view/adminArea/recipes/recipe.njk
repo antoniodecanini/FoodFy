@@ -1,0 +1,62 @@
+{% extends "adminArea/layoutAdm.njk" %}
+
+{% block title %}
+  <title>Foodfy - {{ recipe.title }}</title>
+{% endblock %}
+
+{% block content %}
+  <div class="receita">
+    <div class="top">
+      <h1>Receita: {{ recipe.title}}</h1>
+      <a href="/admin/receitas/{{ recipe.id }}/editar">Editar receita</a>
+    </div>
+
+    <img src="/img/{{ recipe.image }}" alt="">
+
+    <div class="titulo">
+      <h1>{{ recipe.title }}</h1>
+      <p>por {{ recipe.chef_name }}</p>
+    </div>
+
+    <div class="ingredientes">
+      <div class="topic">
+        <h1>Ingredientes</h1>
+        <a class="show-hide" id="topic-ingredient">Ocultar</a>
+      </div>
+      
+      <div class="topic-ingredient">
+        <ul>
+          {% for item in recipe.ingredients %}
+            <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="modopreparo">
+      <div class="topic">
+        <h1>Modo de Preparo</h1>
+        <a class="show-hide" id="topic-preparation">Ocultar</a>
+      </div>
+      
+      <div class="topic-preparation">
+        {% for step in recipe.preparation%}
+          <p>{{ step }}</p>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="infoad">
+      {% if recipe.information != "" %}
+        <div class="topic">
+          <h1>Informações adicionais</h1>
+          <a class="show-hide" id="topic-info">Ocultar</a>
+        </div>
+        
+        <div class="topic-info">
+          <p>{{ recipe.information }}</p>
+        </div>        
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "adminArea/layoutAdm.njk" %}
+
+{% block title %}
+  <title>Foodfy - {{ chef[0].name }}</title>
+{% endblock %}
+
+{% block content %}
+  <div class="receita">
+    <div class="top">
+      <h1>Chef: {{ chef[0].name }}</h1>
+      <a href="/admin/chefs/{{ chef[0].id }}/editar">Editar chef</a>
+    </div>
+
+    <div class="img">
+      <img src="/img/{{ chef[0].avatar_url }}" alt="" class="chef_image">
+    </div>
+
+    <div class="titulo">
+      <h1>{{ chef[0].name }}</h1>
+      <p>{{ chef[0].total_recipes }} receitas</p>
+    </div>
+
+    {% if (chef[0].recipe_title != null) %}
+      <div class="recipes">
+        <h1>Receitas</h1>
+
+        <div class="recipes_list">
+          {% for item in chef %}
+            <div class="recipe">
+              <img src="/img/{{ item.recipe_image }}" alt="{{ item.recipe_title }}">
+              <div class="recipe_info">
+                <h2>{{  item.recipe_title}}</h2>
+                <p>{{ chef[0].name }}</p>
+                <a href="/admin/receitas/{{item.recipe_id}}">Visualizar</a>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+{% endblock %}

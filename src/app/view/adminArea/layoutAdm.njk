@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  {% block title %}
+  {% endblock %}
+
+  <link rel="stylesheet" href="/stylesAdm.css">
+  <link rel="stylesheet" href="/transition.css">
+</head>
+
+<body class="fadeIn">
+  <div class="headerAdm">
+    <header >
+      <div class="logo">
+        <a href="/"><img src="/img/logoPB.png" alt="FoodFy"></a>
+      </div>
+
+      <div class="links">
+        <a href="/admin/receitas">RECEITAS</a>
+        <a href="/admin/chefs">CHEFS</a>
+      </div>
+    </header>
+  </div>
+  
+  
+
+  {% block content %}
+  {% endblock %}
+
+  <script src="/scriptsAdm.js"></script>
+</body>
+</html>

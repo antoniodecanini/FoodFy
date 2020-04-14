@@ -1,0 +1,17 @@
+{% extends "adminArea/layoutAdm.njk" %}
+
+{% block title %}
+  <title>Foodfy - Criar novo chef</title>
+{% endblock %}
+
+{% block content %}
+  <form class="form-card" method="POST" action="/admin/chefs">
+    <section class="create-recipe">
+      <h3>Criando chef</h3>
+      <button type="submit" class="save">Salvar chef</button>
+    </section>
+
+    {% include 'adminArea/chefs/fields.njk' %}
+
+  </form>
+  {% endblock %}
