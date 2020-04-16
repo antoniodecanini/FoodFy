@@ -1,22 +1,16 @@
 const express = require('express');
 const recipes = require('./app/controllers/recipes');
 const chefs = require('./app/controllers/chefs');
+const visitors = require('./app/controllers/visitors');
 
 const routes = express.Router();
 
-routes.get('/', (req, res) => {
-  
-});
-routes.get('/sobre', (req, res) => {
-  
-});
-
-routes.get('/receitas', (req, res) => {
-  
-});
-routes.get('/receitas/:id', (req, res) => {
-  
-});
+routes.get('/', visitors.home);
+routes.get('/sobre', visitors.about);
+routes.get('/receitas', visitors.index);
+routes.get('/receitas/busca', visitors.search)
+routes.get('/receitas/:id', visitors.show);
+routes.get('/chefs', visitors.chefs);
 
 routes.get("/admin/receitas", recipes.index);
 routes.get("/admin/receitas/criar", recipes.create);

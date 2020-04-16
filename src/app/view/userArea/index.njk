@@ -20,11 +20,11 @@
     <h1>Mais vistas</h1>
 
     <div class="cookbook">
-      {% for recipe in data.recipes %}
+      {% for recipe in recipes %}
         <div class="cards" id="{{ recipe.id }}">
-          <img src="{{ recipe.image }}" alt="{{ recipe.title }}">
+          <img src="/img/{{ recipe.image }}" alt="{{ recipe.title }}">
           <h2>{{ recipe.title }}</h2>
-          <p>por {{ recipe.author }}</p>
+          <p>por {{ recipe.chef_name }}</p>
         </div>
       {% endfor %}
     </div>

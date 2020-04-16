@@ -13,6 +13,7 @@
 </head>
 
 <body class="fadeIn">
+<div class="geral">
   <header>
     <div class="logo">
       <a href="/"><img src="/img/logo.png" alt="FoodFy"></a>
@@ -21,6 +22,14 @@
     <div class="links">
       <a href="/sobre">Sobre</a>
       <a href="/receitas">Receitas</a>
+      <a href="/chefs">Chefs</a>
+    </div>
+
+    <div class="search">
+      <form action="/receitas/busca" method="get">
+        <input name="filter" type="text" placeholder="Buscar uma receita">
+        <button type="submit">Buscar</button>
+      </form>
     </div>
   </header>
 
@@ -31,6 +40,7 @@
     <p>Todos os direitos reservados, receitas Foodfy</p>
   </footer>
 
+</div>
   <script src="/scripts.js"></script>
 </body>
 </html>

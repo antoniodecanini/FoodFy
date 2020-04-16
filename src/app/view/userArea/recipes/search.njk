@@ -1,11 +1,12 @@
 {% extends "userArea/layout.njk" %}
 
 {% block title %}
-  <title>Foodfy - Receitas</title>
+  <title>Foodfy - Buscando por {{ filter }}</title>
 {% endblock %}
 
 {% block content %}
   <section class='receitas'>
+    <h1>Buscando por {{ filter }}</h1>
     <div class="cookbook">
       {% for recipe in recipes %}
         <div class="cards" id="{{ recipe.id }}">

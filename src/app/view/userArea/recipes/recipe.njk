@@ -1,16 +1,16 @@
 {% extends "userArea/layout.njk" %}
 
 {% block title %}
-  <title>Foodfy - {{ receita.title }}</title>
+  <title>Foodfy - {{ recipe.title }}</title>
 {% endblock %}
 
 {% block content %}
   <div class="receita">
-    <img src="{{ receita.image }}" alt="">
+    <img src="/img/{{ recipe.image }}" alt="">
 
     <div class="titulo">
-      <h1>{{ receita.title }}</h1>
-      <p>por {{ receita.author }}</p>
+      <h1>{{ recipe.title }}</h1>
+      <p>por {{ recipe.chef_name }}</p>
     </div>
 
     <div class="ingredientes">
@@ -21,7 +21,7 @@
       
       <div class="topic-ingredient">
         <ul>
-          {% for item in receita.ingredients %}
+          {% for item in recipe.ingredients %}
             <li>{{ item }}</li>
           {% endfor %}
         </ul>
@@ -35,21 +35,21 @@
       </div>
       
       <div class="topic-preparation">
-        {% for passo in receita.preparation%}
+        {% for passo in recipe.preparation%}
           <p>{{ passo }}</p>
         {% endfor %}
       </div>
     </div>
 
     <div class="infoad">
-      {% if receita.information != "" %}
+      {% if recipe.information != "" %}
         <div class="topic">
           <h1>Informações adicionais</h1>
           <a class="show-hide" id="topic-info">Ocultar</a>
         </div>
         
         <div class="topic-info">
-          <p>{{ receita.information }}</p>
+          <p>{{ recipe.information }}</p>
         </div>        
       {% endif %}
     </div>
