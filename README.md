@@ -45,7 +45,7 @@ $ npm install
 
 ### Step 2 - ⚙️ Make the settings
 - In `src/config/db.js`, you will find the DB config
-  - Fill all fields with you configuration.
+  - Fill all fields with your configuration.
 
 ### Step 3 - 🖥 Climb server
 ```
