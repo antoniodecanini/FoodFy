@@ -54,7 +54,7 @@ $ npm start
 
 ### Step 4 - ⬆️ Open site
 - Open your browser, then:
-  - Acces `http://localhost:5500/`
+  - Acces `http://localhost:5500`
 
 ---
 
